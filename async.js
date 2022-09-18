@@ -43,3 +43,9 @@ async function foo2() {
 
 foo1().then(console.log);
 foo2().then(console.log);
+
+// 3. useful Promise APIs
+function allWork() {
+  return Promise.all([getFirst(), getSecond()]).then((res) => res);
+}
+allWork().then(console.log);
